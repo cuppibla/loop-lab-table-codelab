@@ -1,0 +1,6 @@
+$ adk eval host host/golden_demo.evalset.json --config_file_path eval_config_golden.json
+  Tests passed: 0
+  Tests failed: 1
+Metric: response_match_score, Status: FAILED, Score: 0.17857142857142858, Threshold: 0.8
+
+# the answer it failed: Olive & Thyme @ 18:00 — feeds all six (honest judge: 1.00)

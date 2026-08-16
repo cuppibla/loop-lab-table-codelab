@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060">
+  <style>
+    text { font-family: -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; fill: #0F172A; }
+    .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    .title { font-size: 34px; font-weight: 700; }
+    .sub { font-size: 20px; fill: #64748B; }
+    .tag { font-size: 17px; font-weight: 600; fill: #334155; }
+    .name { font-size: 17px; font-weight: 600; }
+    .note { font-size: 12.5px; fill: #64748B; }
+  </style>
+  <defs>
+    <linearGradient id="agent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/></marker>
+    <marker id="arrV" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8B5CF6"/></marker>
+  </defs>
+  <rect width="1600" height="1060" fill="#FFFFFF"/>
+
+  <text class="title" x="70" y="84">Table for N — how one click becomes a night at the table</text>
+  <text class="sub" x="70" y="122">one append-only event log in the middle — engines only emit, the felt only renders</text>
+
+  <!-- ═══ BROWSER ═══ -->
+  <rect x="70" y="170" width="400" height="560" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+  <text class="mono tag" x="96" y="206">BROWSER · Next.js :3260</text>
+
+  <rect x="105" y="240" width="330" height="90" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono name" x="270" y="278" text-anchor="middle">Start · the judge switch</text>
+  <text class="mono note" x="270" y="304" text-anchor="middle">the only two controls</text>
+
+  <rect x="105" y="370" width="330" height="90" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono name" x="270" y="408" text-anchor="middle">the felt table</text>
+  <text class="mono note" x="270" y="434" text-anchor="middle">seats fold · the strip stamps</text>
+
+  <rect x="105" y="550" width="330" height="110" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono name" x="270" y="588" text-anchor="middle">replay mode — no server</text>
+  <text class="mono note" x="270" y="614" text-anchor="middle">public/replay/episode.json</text>
+  <text class="mono note" x="270" y="636" text-anchor="middle">?act=1..4 = level boundaries</text>
+  <line x1="270" y1="550" x2="270" y2="466" stroke="#94A3B8" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+
+  <!-- ═══ SERVER (one process) ═══ -->
+  <rect x="560" y="170" width="970" height="560" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+  <text class="mono tag" x="586" y="206">broadcast.py · uvicorn :8323 — ONE process</text>
+
+  <!-- the bus -->
+  <rect x="580" y="225" width="420" height="430" rx="14" fill="#FFFFFF" fill-opacity="0.5" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text class="mono" x="600" y="251" font-size="13.5" font-weight="600" style="fill:#64748B">the bus</text>
+
+  <rect x="600" y="260" width="380" height="70" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono name" x="790" y="290" text-anchor="middle">POST /run</text>
+  <text class="mono note" x="790" y="314" text-anchor="middle">importlib picks the RUNNER module</text>
+
+  <rect x="600" y="350" width="380" height="80" rx="12" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+  <text class="mono name" x="790" y="384" text-anchor="middle" style="fill:#92400E">the LOG — append-only</text>
+  <text class="mono note" x="790" y="410" text-anchor="middle" style="fill:#B45309">emit() numbers every event</text>
+
+  <rect x="600" y="450" width="380" height="70" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono name" x="790" y="480" text-anchor="middle">POST /actions</text>
+  <text class="mono note" x="790" y="504" text-anchor="middle">→ the ACTIONS queue</text>
+
+  <rect x="600" y="540" width="380" height="80" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono name" x="790" y="574" text-anchor="middle">GET /events</text>
+  <text class="mono note" x="790" y="600" text-anchor="middle">SSE: full history, then live</text>
+
+  <!-- the brain -->
+  <rect x="1040" y="225" width="460" height="465" rx="14" fill="#FFFFFF" fill-opacity="0.5" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text class="mono" x="1060" y="251" font-size="13.5" font-weight="600" style="fill:#64748B">the brain — RUNNER=</text>
+
+  <rect x="1060" y="260" width="420" height="80" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono name" x="1270" y="294" text-anchor="middle">scripted (default)</text>
+  <text class="mono note" x="1270" y="320" text-anchor="middle">levels 01-04 measured numbers · no key</text>
+
+  <rect x="1060" y="360" width="420" height="80" rx="12" fill="url(#agent)"/>
+  <text class="mono name" x="1270" y="394" text-anchor="middle" style="fill:#FFFFFF">✦ solutions · TABLE_LIVE=1</text>
+  <text class="mono note" x="1270" y="420" text-anchor="middle" style="fill:#FFFFFF" opacity="0.85">the episode as an ADK 2 Workflow</text>
+
+  <rect x="1060" y="460" width="420" height="80" rx="12" fill="url(#agent)"/>
+  <text class="mono name" x="1270" y="494" text-anchor="middle" style="fill:#FFFFFF">✦ flywheel</text>
+  <text class="mono note" x="1270" y="520" text-anchor="middle" style="fill:#FFFFFF" opacity="0.85">the bounded self-evolving loop</text>
+
+  <rect x="1060" y="560" width="420" height="80" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text class="mono name" x="1270" y="594" text-anchor="middle" style="fill:#047857">world.everyone_ate</text>
+  <text class="mono note" x="1270" y="620" text-anchor="middle" style="fill:#059669">every engine grades with this one fn</text>
+
+  <!-- ═══ Gemini ═══ -->
+  <rect x="1100" y="746" width="360" height="62" rx="14" fill="url(#agent)"/>
+  <text class="mono name" x="1280" y="784" text-anchor="middle" style="fill:#FFFFFF">✦ Gemini API · gemini-2.5-flash</text>
+
+  <!-- ═══ the walk ═══ -->
+  <!-- 1: Start -> POST /run -->
+  <path d="M 435 270 L 520 270 L 520 295 L 592 295" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+  <circle cx="477" cy="270" r="14" fill="#0F172A"/><text x="477" y="275" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">1</text>
+  <!-- 2: /run -> brain -->
+  <line x1="980" y1="295" x2="1032" y2="295" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+  <circle cx="1010" cy="295" r="14" fill="#0F172A"/><text x="1010" y="300" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">2</text>
+  <!-- 3: brain -> LOG -->
+  <line x1="1040" y1="390" x2="988" y2="390" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+  <circle cx="1014" cy="390" r="14" fill="#0F172A"/><text x="1014" y="395" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">3</text>
+  <!-- 4: /events -> felt table (stream) -->
+  <path d="M 600 580 L 490 580 L 490 395 L 443 395" fill="none" stroke="#94A3B8" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+  <circle cx="490" cy="490" r="14" fill="#0F172A"/><text x="490" y="495" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">4</text>
+  <!-- 5: switch -> /actions -->
+  <path d="M 435 305 L 555 305 L 555 485 L 592 485" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+  <circle cx="555" cy="398" r="14" fill="#0F172A"/><text x="555" y="403" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">5</text>
+  <!-- 6: /actions -> brain (resume) -->
+  <line x1="980" y1="485" x2="1032" y2="485" stroke="#94A3B8" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+  <circle cx="1010" cy="485" r="14" fill="#0F172A"/><text x="1010" y="490" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">6</text>
+  <!-- 7: brain -> Gemini -->
+  <line x1="1280" y1="690" x2="1280" y2="738" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrV)"/>
+  <circle cx="1280" cy="716" r="14" fill="#0F172A"/><text x="1280" y="721" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">7</text>
+
+  <text class="mono" x="70" y="852" font-size="14" style="fill:#334155">① press Start → POST /run   ② importlib(RUNNER) starts the brain   ③ every emit() appends to the LOG   ④ SSE streams history + live to the felt</text>
+  <text class="mono" x="70" y="878" font-size="14" style="fill:#334155">⑤ the switch → POST /actions   ⑥ wait_for / RequestInput resumes the paused loop   ⑦ ✦ nodes are live model calls</text>
+
+  <!-- legend -->
+  <g transform="translate(70,908)">
+    <rect x="0" y="0" width="26" height="18" rx="5" fill="url(#agent)"/><text x="34" y="14" font-size="14">LLM engine / live call</text>
+    <rect x="210" y="0" width="26" height="18" rx="5" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/><text x="244" y="14" font-size="14">deterministic judge</text>
+    <rect x="410" y="0" width="26" height="18" rx="5" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/><text x="444" y="14" font-size="14">the one log</text>
+    <line x1="580" y1="9" x2="620" y2="9" stroke="#94A3B8" stroke-width="2"/><text x="628" y="14" font-size="14">HTTP / function call</text>
+    <line x1="790" y1="9" x2="830" y2="9" stroke="#94A3B8" stroke-width="2" stroke-dasharray="6 5"/><text x="838" y="14" font-size="14">stream / async resume</text>
+  </g>
+
+  <!-- caveat -->
+  <rect x="70" y="948" width="1460" height="80" rx="14" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+  <text x="100" y="982" font-size="18" font-weight="700" style="fill:#92400E">⚠ The separation is the point: engines only emit() — the felt only renders.</text>
+  <text x="100" y="1010" font-size="16" style="fill:#B45309">RUNNER= swaps the brain without touching the UI, and any server that speaks the event contract can drive the table (attendee mode).</text>
+</svg>

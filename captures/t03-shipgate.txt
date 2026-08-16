@@ -1,0 +1,7 @@
+$ cp prebaked/instruction_after.txt instruction_current.txt   # ship the winner
+$ adk eval host host/parties_val.evalset.json --config_file_path eval_config.json
+Eval Run Summary
+  Tests passed: 6
+  Tests failed: 2
+
+# baseline was 3/8 — better on parties it has never seen -> ship

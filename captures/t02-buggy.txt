@@ -1,0 +1,4 @@
+$ adk eval host host/parties_val.evalset.json --config_file_path eval_config.json
+Eval Run Summary
+  Tests passed: 8
+  Tests failed: 0

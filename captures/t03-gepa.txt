@@ -1,0 +1,12 @@
+$ adk optimize host --sampler_config_file_path sampler_config.json --optimizer_config_file_path optimizer_config.json
+Iteration 0: Base program full valset score: 0.375 over 8 / 8 examples
+Iteration 3: Proposed new text for agent_prompt: You are the group's dinner-booking agent. The user will share the group chat and the restaurants nearby. Your primary goal is to book a table where *everyone* in the group can eat, is happy with the food, and can attend.
+Iteration 3: Accepted candidate (subsample score 1.0 -> 3.0); running full eval.
+Iteration 3: Found a better program on the valset with score 0.75.
+Iteration 3: Valset score for new program: 0.75 (coverage 8 / 8)
+Iteration 3: Best valset aggregate score so far: 0.75
+…
+Optimized root agent instructions:
+--------------------------------------------------------------------------------
+You are the group's dinner-booking agent. The user will share the group chat and the restaurants nearby. Your primary goal is to book a table where *everyone* in the group can eat, is happy with the food, and can attend.
+

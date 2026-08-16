@@ -1,0 +1,7 @@
+$ adk optimize host --sampler_config_file_path sampler_config_gameable.json …   # pointed at the SHIPPED instruction
+Iteration 0: Base program full valset score: 0.125 over 8 / 8 examples
+Iteration 5: Selected program 1 score: 0.125
+Iteration 17: Selected program 0 score: 0.125
+Iteration 17: New subsample score 0.0 is not better than old score 1.0, skipping
+Iteration 21: Selected program 0 score: 0.125
+… 25 straight proposals skipped — zero gradient. Reward hacking needs a foothold.

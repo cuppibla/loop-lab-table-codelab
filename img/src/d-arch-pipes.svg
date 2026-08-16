@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040">
+  <style>
+    text { font-family: -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; fill: #0F172A; }
+    .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    .title { font-size: 34px; font-weight: 700; }
+    .sub { font-size: 20px; fill: #64748B; }
+    .nm { font-size: 17px; font-weight: 600; }
+    .nt { font-size: 12.5px; fill: #64748B; }
+  </style>
+  <defs>
+    <linearGradient id="agent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/></marker>
+    <marker id="arrV" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8B5CF6"/></marker>
+  </defs>
+  <rect width="1600" height="1040" fill="#FFFFFF"/>
+
+  <text class="title" x="70" y="84">Level 06 — two pipes out of production, one arrow back</text>
+  <text class="sub" x="70" y="122">the same 13 conversations feed both pipes — they answer different questions and never need to sync</text>
+
+  <!-- traffic -->
+  <rect x="70" y="280" width="280" height="120" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono nm" x="210" y="322" text-anchor="middle">send_traffic.py</text>
+  <text class="mono nt" x="210" y="348" text-anchor="middle">13 conversations —</text>
+  <text class="mono nt" x="210" y="368" text-anchor="middle">8 holdout parties + 5 seeds</text>
+
+  <line x1="350" y1="340" x2="422" y2="340" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+  <circle cx="386" cy="340" r="14" fill="#0F172A"/><text x="386" y="345" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">1</text>
+
+  <!-- deployed host -->
+  <rect x="430" y="280" width="320" height="120" rx="14" fill="url(#agent)"/>
+  <text class="mono nm" x="590" y="322" text-anchor="middle" style="fill:#FFFFFF">✦ host · Agent Runtime</text>
+  <text class="mono nt" x="590" y="348" text-anchor="middle" style="fill:#FFFFFF" opacity="0.85">reasoningEngine on Agent Platform</text>
+  <text class="mono nt" x="590" y="368" text-anchor="middle" style="fill:#FFFFFF" opacity="0.85">the shipped winner instruction</text>
+
+  <!-- ═══ PIPE 1 ═══ -->
+  <rect x="820" y="170" width="710" height="250" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+  <text class="mono" x="846" y="206" font-size="16" font-weight="600" style="fill:#334155">PIPE ① WATCH — live · automatic</text>
+
+  <rect x="850" y="255" width="300" height="110" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono nm" x="1000" y="290" text-anchor="middle">Cloud Trace</text>
+  <text class="mono nt" x="1000" y="316" text-anchor="middle">spans: invocation → agent → llm</text>
+  <text class="mono nt" x="1000" y="336" text-anchor="middle">fed by --otel_to_cloud</text>
+
+  <rect x="1190" y="245" width="310" height="130" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono nm" x="1345" y="283" text-anchor="middle">Platform eval · console</text>
+  <text class="mono nt" x="1345" y="309" text-anchor="middle">✦ judge: invented_restaurant_check</text>
+  <text class="mono nt" x="1345" y="329" text-anchor="middle">caught: Chez Fantôme (not real)</text>
+  <text class="mono nt" x="1345" y="349" text-anchor="middle">+ Online Monitors</text>
+
+  <path d="M 750 310 L 842 310" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+  <circle cx="796" cy="310" r="14" fill="#0F172A"/><text x="796" y="315" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">2</text>
+
+  <line x1="1150" y1="310" x2="1182" y2="310" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+  <circle cx="1166" cy="310" r="14" fill="#0F172A"/><text x="1166" y="315" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">3</text>
+
+  <!-- ═══ PIPE 2 ═══ -->
+  <rect x="820" y="460" width="710" height="250" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+  <text class="mono" x="846" y="496" font-size="16" font-weight="600" style="fill:#334155">PIPE ② HARVEST — offline · queryable</text>
+
+  <rect x="850" y="540" width="300" height="110" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono nm" x="1000" y="582" text-anchor="middle">BigQuery</text>
+  <text class="mono nt" x="1000" y="608" text-anchor="middle">table_analytics.agent_events</text>
+  <text class="mono nt" x="1000" y="628" text-anchor="middle">one structured row per event</text>
+
+  <rect x="1190" y="530" width="310" height="130" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text class="mono nm" x="1345" y="572" text-anchor="middle" style="fill:#047857">harvest.py</text>
+  <text class="mono nt" x="1345" y="598" text-anchor="middle" style="fill:#059669">re-grades with everyone_ate</text>
+  <text class="mono nt" x="1345" y="618" text-anchor="middle" style="fill:#059669">no goldens needed · [skip] rows</text>
+
+  <path d="M 590 400 L 590 595 L 842 595" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+  <circle cx="590" cy="500" r="14" fill="#0F172A"/><text x="590" y="505" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">4</text>
+  <text class="mono" x="700" y="578" text-anchor="middle" font-size="12.5" style="fill:#64748B">replay_to_bq.py · BQ plugin</text>
+
+  <line x1="1150" y1="595" x2="1182" y2="595" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+  <circle cx="1166" cy="595" r="14" fill="#0F172A"/><text x="1166" y="600" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">5</text>
+
+  <!-- the arrow back -->
+  <path d="M 1345 660 L 1345 800 L 1198 800" fill="none" stroke="#8B5CF6" stroke-width="2.5" marker-end="url(#arrV)"/>
+  <circle cx="1345" cy="734" r="14" fill="#0F172A"/><text x="1345" y="739" text-anchor="middle" font-size="13" font-weight="700" style="fill:#FFFFFF">6</text>
+
+  <rect x="850" y="760" width="340" height="80" rx="12" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+  <text class="mono nm" x="1020" y="794" text-anchor="middle" style="fill:#92400E">harvested.evalset.json</text>
+  <text class="mono nt" x="1020" y="820" text-anchor="middle" style="fill:#B45309">the failures, minted as eval cases</text>
+
+  <path d="M 850 800 L 418 800" fill="none" stroke="#8B5CF6" stroke-width="2.5" marker-end="url(#arrV)"/>
+  <text x="630" y="780" text-anchor="middle" font-size="16" font-weight="600" style="fill:#7C3AED">production failures become next round's exam</text>
+
+  <rect x="70" y="760" width="340" height="80" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text class="mono nm" x="240" y="794" text-anchor="middle" style="fill:#047857">the next TRAIN</text>
+  <text class="mono nt" x="240" y="820" text-anchor="middle" style="fill:#059669">parties_train + harvested → adk optimize</text>
+
+  <!-- the walk -->
+  <text class="mono" x="70" y="884" font-size="14" style="fill:#334155">① 13 nights hit the deployed host   ② spans stream to Trace automatically   ③ the platform's ✦ judge watches live</text>
+  <text class="mono" x="70" y="910" font-size="14" style="fill:#334155">④ replay lands one row per event in BigQuery   ⑤ harvest.py re-grades history for free   ⑥ the failures become the next exam</text>
+
+  <!-- legend -->
+  <g transform="translate(70,936)">
+    <rect x="0" y="0" width="26" height="18" rx="5" fill="url(#agent)"/><text x="34" y="14" font-size="14">deployed agent / LLM judge</text>
+    <rect x="250" y="0" width="26" height="18" rx="5" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/><text x="284" y="14" font-size="14">deterministic re-grade</text>
+    <rect x="480" y="0" width="26" height="18" rx="5" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/><text x="514" y="14" font-size="14">minted exam artifact</text>
+    <line x1="700" y1="9" x2="740" y2="9" stroke="#8B5CF6" stroke-width="2.5"/><text x="748" y="14" font-size="14">the flywheel closing</text>
+  </g>
+
+  <!-- caveat -->
+  <rect x="70" y="966" width="1460" height="64" rx="14" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+  <text x="100" y="993" font-size="17" font-weight="700" style="fill:#92400E">⚠ Pipe ① answers "is it OK right now?" — Pipe ② answers "what should we learn?"</text>
+  <text x="100" y="1018" font-size="15" style="fill:#B45309">everyone_ate needs no goldens, so it can re-grade dinners that already happened — that's what makes the harvest free.</text>
+</svg>

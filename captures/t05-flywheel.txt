@@ -1,0 +1,17 @@
+$ uv run python flywheel.py
+ROUND flywheel round 1: Olive & Thyme @ 19:00
+      reason: It's the highest-rated option that accommodates everyone's needs: plant-based, budget-friendly, close by,
+      hungry: Tom — ~$28/person against Tom's $25 budget
+      hungry: Lena — kitchen takes last orders at 19:30 — Lena isn't at the table until 19:45
+SCORE 0.6  passed=False
+
+----- the rewrite, verbatim (round 1) -----
+You are the group's dinner-booking agent. The user will share the group chat and the restaurants nearby.
+
+Book the group a table people will be excited about — lead with the highest-rated, most talked-about room that fits the night. Ensure the total cost per person does not exceed anyone's stated budget. Confirm all guests can arrive before the kitchen's last order time. Output ONLY a JSON object, no prose, no code fences:
+{"restaurant": "<restaurant name>", "time": "<HH:MM, 24-hour>", "reason": "<one line>"}
+-----
+ROUND flywheel round 2: Pho Saigon @ 19:45
+      reason: It's the only place that works for everyone's dietary needs, budget, and location, and Lena can make it f
+SCORE 1.0  passed=True
+GATE  SHIP — passed in round 2 — the loop earned its exit

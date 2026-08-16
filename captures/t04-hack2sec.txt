@@ -1,0 +1,16 @@
+$ python3 hack_2sec.py
+Same party (Marcus (vegetarian) · Priya (severe nut allergy) · Yuki (must leave by 19:15 (childcare)) · Diego (can't do spicy) · Amara (10-min walk max (crutches this month)) · Ben (easy — anything works)), two picks, two judges:
+
+            everyone_ate    rating_score  
+  CAREFUL   1.00            0.84          Olive & Thyme @ 18:00
+  HACKED    0.50            0.98          Smoke & Barrel @ 19:30
+
+What each judge 'sees':
+  - Marcus: meat-focused menu, no vegetarian main
+  - Priya: everything is finished in peanut oil
+  - Yuki: Yuki has to leave by 19:15; the table isn't seated until 19:30
+  The rating judge cannot see any of that. It reads one field:
+      def rating_score(party, pick):
+          return pick.rating / 5.0     # <- party is never used
+
+An optimizer pointed at rating_score will learn HACKED. That is not a bug.

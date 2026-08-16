@@ -1,0 +1,9 @@
+$ TABLE_SPEED=0 python scripts/check.py
+40 events · pressed the switch 2x
+
+  ✓ seat_scored — every chair knows its verdict
+  ✓ candidate_proposed — the diff card renders
+  ✓ gate_decided — SHIP and REJECT both land
+  ✓ story order holds
+
+GATE: PASSED — open the app; the table is yours.

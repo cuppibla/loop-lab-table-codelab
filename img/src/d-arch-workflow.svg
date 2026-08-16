@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <style>
+    text { font-family: -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; fill: #0F172A; }
+    .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    .title { font-size: 34px; font-weight: 700; }
+    .sub { font-size: 20px; fill: #64748B; }
+    .band { font-size: 14px; font-weight: 700; fill: #94A3B8; letter-spacing: 1px; }
+    .nm { font-size: 14px; font-weight: 600; }
+    .nt { font-size: 11px; fill: #64748B; }
+  </style>
+  <defs>
+    <linearGradient id="agent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/></marker>
+    <marker id="arrA" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#F59E0B"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+
+  <text class="title" x="70" y="84">The episode as one ADK 2 Workflow — 17 nodes, 2 suspensions</text>
+  <text class="sub" x="70" y="122">solutions/loop_runner.py · run_workflow() — every ✦ is a live gemini-2.5-flash call; the graph halts at amber until the app answers</text>
+
+  <rect x="70" y="170" width="1460" height="530" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+  <text class="mono" x="96" y="206" font-size="16" font-weight="600" style="fill:#334155">Workflow(name="episode", edges=[ START, seat_party, …, aftermath ]) — one chain, no branches</text>
+
+  <!-- ── ACT I ── -->
+  <text class="band mono" x="95" y="248">ACT I — THE DRAFT, JUDGED, COACHED, RE-BOOKED</text>
+
+  <rect x="95" y="270" width="80" height="60" rx="30" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+  <text class="mono" x="135" y="305" text-anchor="middle" font-size="13" font-weight="700" style="fill:#047857">START</text>
+  <line x1="175" y1="300" x2="197" y2="300" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="205" y="260" width="166" height="80" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono nm" x="288" y="294" text-anchor="middle">seat_party</text>
+  <text class="mono nt" x="288" y="318" text-anchor="middle">fn · state.brief</text>
+  <line x1="371" y1="300" x2="393" y2="300" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="401" y="260" width="166" height="80" rx="10" fill="url(#agent)"/>
+  <text class="mono nm" x="484" y="294" text-anchor="middle" style="fill:#FFFFFF">✦ draft_host</text>
+  <text class="mono nt" x="484" y="318" text-anchor="middle" style="fill:#FFFFFF" opacity="0.85">the day-one draft</text>
+  <line x1="567" y1="300" x2="589" y2="300" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="597" y="260" width="166" height="80" rx="10" fill="#FFFFFF" stroke="#10B981" stroke-width="1.5"/>
+  <text class="mono nm" x="680" y="294" text-anchor="middle" style="fill:#047857">judge_draft</text>
+  <text class="mono nt" x="680" y="318" text-anchor="middle" style="fill:#059669">everyone_ate</text>
+  <line x1="763" y1="300" x2="785" y2="300" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="793" y="260" width="166" height="80" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono nm" x="876" y="294" text-anchor="middle">coach</text>
+  <text class="mono nt" x="876" y="318" text-anchor="middle">prebaked GEPA · SHIP</text>
+  <line x1="959" y1="300" x2="981" y2="300" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="989" y="260" width="166" height="80" rx="10" fill="url(#agent)"/>
+  <text class="mono nm" x="1072" y="294" text-anchor="middle" style="fill:#FFFFFF">✦ winner_host</text>
+  <text class="mono nt" x="1072" y="318" text-anchor="middle" style="fill:#FFFFFF" opacity="0.85">the GEPA winner</text>
+  <line x1="1155" y1="300" x2="1177" y2="300" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="1185" y="260" width="166" height="80" rx="10" fill="#FFFFFF" stroke="#10B981" stroke-width="1.5"/>
+  <text class="mono nm" x="1268" y="294" text-anchor="middle" style="fill:#047857">judge_winner</text>
+  <text class="mono nt" x="1268" y="318" text-anchor="middle" style="fill:#059669">everyone_ate</text>
+
+  <path d="M 1351 300 L 1425 300 L 1425 460 L 1359 460" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── ACT II ── -->
+  <text class="band mono" x="95" y="408">ACT II — THE SWITCH, THE HACK</text>
+
+  <rect x="616" y="346" width="360" height="56" rx="28" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  <text class="mono" x="796" y="369" text-anchor="middle" font-size="14" font-weight="700" style="fill:#92400E">the app's judge switch</text>
+  <text class="mono" x="796" y="389" text-anchor="middle" font-size="11" style="fill:#B45309">POST /actions → answers the pending call</text>
+  <path d="M 976 374 L 1268 374 L 1268 412" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrA)"/>
+  <path d="M 616 374 L 484 374 L 484 412" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrA)"/>
+
+  <rect x="1185" y="420" width="166" height="80" rx="10" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  <text class="mono nm" x="1268" y="454" text-anchor="middle" style="fill:#92400E">ask_switch</text>
+  <text class="mono nt" x="1268" y="478" text-anchor="middle" style="fill:#B45309">RequestInput ⏸ halts</text>
+  <line x1="1185" y1="460" x2="1163" y2="460" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="989" y="420" width="166" height="80" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono nm" x="1072" y="454" text-anchor="middle">on_switch</text>
+  <text class="mono nt" x="1072" y="478" text-anchor="middle">judge → rating</text>
+  <line x1="989" y1="460" x2="967" y2="460" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="793" y="420" width="166" height="80" rx="10" fill="url(#agent)"/>
+  <text class="mono nm" x="876" y="454" text-anchor="middle" style="fill:#FFFFFF">✦ hacked_host</text>
+  <text class="mono nt" x="876" y="478" text-anchor="middle" style="fill:#FFFFFF" opacity="0.85">the ratings hack</text>
+  <line x1="793" y1="460" x2="771" y2="460" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="597" y="420" width="166" height="80" rx="10" fill="#FFFFFF" stroke="#10B981" stroke-width="1.5"/>
+  <text class="mono nm" x="680" y="454" text-anchor="middle" style="fill:#047857">judge_hacked</text>
+  <text class="mono nt" x="680" y="478" text-anchor="middle" style="fill:#059669">both judges</text>
+  <line x1="597" y1="460" x2="575" y2="460" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="401" y="420" width="166" height="80" rx="10" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  <text class="mono nm" x="484" y="454" text-anchor="middle" style="fill:#92400E">ask_switch_back</text>
+  <text class="mono nt" x="484" y="478" text-anchor="middle" style="fill:#B45309">RequestInput ⏸ halts</text>
+  <line x1="401" y1="460" x2="379" y2="460" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="205" y="420" width="166" height="80" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono nm" x="288" y="454" text-anchor="middle">on_switch_back</text>
+  <text class="mono nt" x="288" y="478" text-anchor="middle">REJECT at the gate</text>
+
+  <path d="M 205 460 L 150 460 L 150 620 L 197 620" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── ACT III ── -->
+  <text class="band mono" x="810" y="568">ACT III — THE ENCORE · THEN THE MORNING AFTER</text>
+  <rect x="195" y="570" width="578" height="100" rx="12" fill="none" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text class="mono" x="195" y="562" font-size="13" font-weight="700" style="fill:#B45309">YOUR NODE — the level-05 exercise</text>
+
+  <rect x="205" y="580" width="166" height="80" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono nm" x="288" y="614" text-anchor="middle">encore_setup</text>
+  <text class="mono nt" x="288" y="638" text-anchor="middle">seats party p2</text>
+  <line x1="371" y1="620" x2="393" y2="620" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="401" y="580" width="166" height="80" rx="10" fill="url(#agent)"/>
+  <text class="mono nm" x="484" y="614" text-anchor="middle" style="fill:#FFFFFF">✦ encore_host</text>
+  <text class="mono nt" x="484" y="638" text-anchor="middle" style="fill:#FFFFFF" opacity="0.85">the winner, on p2</text>
+  <line x1="567" y1="620" x2="589" y2="620" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="597" y="580" width="166" height="80" rx="10" fill="#FFFFFF" stroke="#10B981" stroke-width="1.5"/>
+  <text class="mono nm" x="680" y="614" text-anchor="middle" style="fill:#047857">judge_encore</text>
+  <text class="mono nt" x="680" y="638" text-anchor="middle" style="fill:#059669">everyone_ate</text>
+  <line x1="763" y1="620" x2="785" y2="620" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="793" y="580" width="166" height="80" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono nm" x="876" y="614" text-anchor="middle">aftermath</text>
+  <text class="mono nt" x="876" y="638" text-anchor="middle">the real 06 night</text>
+  <line x1="959" y1="620" x2="981" y2="620" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="989" y="590" width="80" height="60" rx="30" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+  <text class="mono" x="1029" y="625" text-anchor="middle" font-size="13" font-weight="700" style="fill:#047857">END</text>
+
+  <!-- legend -->
+  <g transform="translate(70,736)">
+    <rect x="0" y="0" width="26" height="18" rx="5" fill="url(#agent)"/><text x="34" y="14" font-size="14">✦ agent node — one live model call</text>
+    <rect x="310" y="0" width="26" height="18" rx="5" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/><text x="344" y="14" font-size="14">function node — emits to the bus</text>
+    <rect x="610" y="0" width="26" height="18" rx="5" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/><text x="644" y="14" font-size="14">RequestInput — the graph suspends</text>
+    <rect x="930" y="0" width="26" height="18" rx="9" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/><text x="964" y="14" font-size="14">START / END</text>
+  </g>
+
+  <!-- caveat -->
+  <rect x="70" y="778" width="1460" height="84" rx="14" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+  <text x="100" y="812" font-size="18" font-weight="700" style="fill:#92400E">⚠ A halted graph resumes ONLY via a function_response aimed at the pending long_running call id.</text>
+  <text x="100" y="840" font-size="16" style="fill:#B45309">wire format {"result": …} — a plain text message would start a NEW invocation from START. The switch button is doing protocol work.</text>
+</svg>

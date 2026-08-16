@@ -1,0 +1,8 @@
+$ uv run python run.py p1
+```json
+{
+  "restaurant": "Olive & Thyme",
+  "time": "19:00",
+  "reason": "It's the highest-rated option that accommodates Nadia's plant-based diet, Tom's budget, Amara's mobility, and Lena's late arrival, with shareable plates and spice on the side."
+}
+```

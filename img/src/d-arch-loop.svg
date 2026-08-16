@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="840" viewBox="0 0 1600 840">
+  <style>
+    text { font-family: -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; fill: #0F172A; }
+    .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    .title { font-size: 34px; font-weight: 700; }
+    .sub { font-size: 20px; fill: #64748B; }
+  </style>
+  <defs>
+    <linearGradient id="agent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/></marker>
+    <marker id="arrV" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8B5CF6"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#10B981"/></marker>
+  </defs>
+  <rect width="1600" height="840" fill="#FFFFFF"/>
+
+  <text class="title" x="70" y="84">The flywheel: book → judge → rewrite → book again</text>
+  <text class="sub" x="70" y="122">flywheel.py — the instruction is session state; the graph rewrites it while it runs</text>
+
+  <!-- container -->
+  <rect x="140" y="180" width="1210" height="440" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+  <text class="mono" x="170" y="224" font-size="20" font-weight="600" style="fill:#334155">flywheel</text>
+  <rect x="280" y="204" width="330" height="28" rx="14" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+  <text class="mono" x="445" y="223" text-anchor="middle" font-size="14" style="fill:#92400E">(proposer, publish, host)  = the loop</text>
+
+  <!-- START · seed -->
+  <rect x="165" y="325" width="80" height="60" rx="30" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+  <text class="mono" x="205" y="360" text-anchor="middle" font-size="13" font-weight="700" style="fill:#047857">START</text>
+  <line x1="245" y1="355" x2="272" y2="355" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="270" y="320" width="160" height="70" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono" x="350" y="350" text-anchor="middle" font-size="15" font-weight="600">seed</text>
+  <text class="mono" x="350" y="372" text-anchor="middle" font-size="11" style="fill:#64748B">brief + draft → state</text>
+  <line x1="430" y1="355" x2="452" y2="355" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- host -->
+  <rect x="460" y="300" width="270" height="110" rx="14" fill="url(#agent)"/>
+  <text class="mono" x="595" y="346" text-anchor="middle" font-size="20" font-weight="600" style="fill:#FFFFFF">✦ host</text>
+  <text class="mono" x="595" y="376" text-anchor="middle" font-size="12" style="fill:#FFFFFF" opacity="0.85">instruction = {current_instruction}</text>
+
+  <line x1="730" y1="355" x2="772" y2="355" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- judge -->
+  <rect x="780" y="300" width="260" height="110" rx="14" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text class="mono" x="910" y="346" text-anchor="middle" font-size="20" font-weight="600" style="fill:#047857">everyone_ate</text>
+  <text class="mono" x="910" y="376" text-anchor="middle" font-size="12.5" style="fill:#059669">score + a why per hungry seat</text>
+
+  <line x1="1040" y1="355" x2="1052" y2="355" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- router diamond -->
+  <polygon points="1165,285 1270,355 1165,425 1060,355" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  <text class="mono" x="1165" y="340" text-anchor="middle" font-size="13.5" style="fill:#92400E">pass ≥ 0.9 ?</text>
+  <text class="mono" x="1165" y="361" text-anchor="middle" font-size="13.5" style="fill:#92400E">budget left ?</text>
+  <text class="mono" x="1165" y="382" text-anchor="middle" font-size="13.5" style="fill:#92400E">improving ?</text>
+
+  <!-- ship exit -->
+  <line x1="1270" y1="355" x2="1400" y2="355" stroke="#10B981" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="1335" y="338" text-anchor="middle" font-size="15" font-weight="600" style="fill:#047857">ship</text>
+  <rect x="1408" y="310" width="140" height="90" rx="14" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="1478" y="362" text-anchor="middle" font-size="19" font-weight="600" style="fill:#047857">✓ SHIP</text>
+  <text class="mono" x="1478" y="428" text-anchor="middle" font-size="12" style="fill:#059669">real run: R1 0.60 → R2 1.00</text>
+  <text class="mono" x="1478" y="448" text-anchor="middle" font-size="12" style="fill:#059669">Olive &amp; Thyme → Pho Saigon</text>
+
+  <!-- improve -->
+  <line x1="1165" y1="425" x2="1165" y2="475" stroke="#8B5CF6" stroke-width="2.5" marker-end="url(#arrV)"/>
+  <text class="mono" x="1210" y="458" font-size="14" font-weight="700" style="fill:#7C3AED">improve</text>
+
+  <!-- proposer -->
+  <rect x="985" y="483" width="360" height="80" rx="14" fill="url(#agent)"/>
+  <text class="mono" x="1165" y="517" text-anchor="middle" font-size="19" font-weight="600" style="fill:#FFFFFF">✦ proposer</text>
+  <text class="mono" x="1165" y="545" text-anchor="middle" font-size="12.5" style="fill:#FFFFFF" opacity="0.85">the whys in → a replacement instruction out</text>
+
+  <line x1="985" y1="523" x2="928" y2="523" stroke="#8B5CF6" stroke-width="2.5" marker-end="url(#arrV)"/>
+
+  <!-- publish -->
+  <rect x="590" y="483" width="330" height="80" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text class="mono" x="755" y="517" text-anchor="middle" font-size="17" font-weight="600">publish</text>
+  <text class="mono" x="755" y="543" text-anchor="middle" font-size="12.5" style="fill:#64748B">state.current_instruction = new[:2400]</text>
+
+  <!-- the route back -->
+  <path d="M 590 523 L 510 523 L 510 418" fill="none" stroke="#8B5CF6" stroke-width="2.5" marker-end="url(#arrV)"/>
+  <text x="745" y="596" text-anchor="middle" font-size="15" font-weight="600" style="fill:#7C3AED">round n+1 — the host runs under the rewritten instruction</text>
+
+  <!-- legend -->
+  <g transform="translate(140,672)">
+    <rect x="0" y="0" width="26" height="18" rx="5" fill="url(#agent)"/><text x="34" y="14" font-size="14">✦ LLM node — live call</text>
+    <rect x="230" y="0" width="26" height="18" rx="5" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/><text x="264" y="14" font-size="14">pure judge</text>
+    <polygon points="393,0 411,9 393,18 375,9" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5"/><text x="421" y="14" font-size="14">router — the only exit</text>
+    <line x1="630" y1="9" x2="670" y2="9" stroke="#8B5CF6" stroke-width="2.5"/><text x="678" y="14" font-size="14">the route back</text>
+  </g>
+
+  <!-- caveat -->
+  <rect x="140" y="712" width="1410" height="84" rx="14" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+  <text x="170" y="746" font-size="18" font-weight="700" style="fill:#92400E">⚠ Write the brake: ADK gives you the loop (a route edge back) — nothing gives it an end.</text>
+  <text x="170" y="774" font-size="16" style="fill:#B45309">router owns every exit: SHIP on pass ≥ 0.9 · FLY_MAX_ROUNDS=4 · two flat rounds → stop · publish truncates at 2400 chars. Worst case 8 calls.</text>
+</svg>

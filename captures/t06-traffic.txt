@@ -1,0 +1,14 @@
+$ uv run python send_traffic.py
+[01/13] normal                        2.8s  ```json {   "restaurant": "Pho Saigon",   "time": "19:45",  
+[02/13] normal                        2.9s  ```json {   "restaurant": "Taqueria Luna",   "time": "19:00"
+[03/13] normal                        2.6s  ```json {   "restaurant": "Olive & Thyme",   "time": "18:00"
+[04/13] normal                        2.1s  ```json {   "restaurant": "Taqueria Luna",   "time": "18:00"
+[05/13] normal                        2.6s  ```json {   "restaurant": "Taqueria Luna",   "time": "19:00"
+[06/13] normal                        2.3s  ```json {   "restaurant": "Taqueria Luna",   "time": "18:00"
+[07/13] normal                        2.3s  ```json {   "restaurant": "The Green Fork",   "time": "20:00
+[08/13] normal                        2.0s  ```json {   "restaurant": "Taqueria Luna",   "time": "19:00"
+[09/13] bad-impossible-table          2.1s  ```json {   "restaurant": "The Green Fork",   "time": "19:45
+[10/13] bad-nonexistent-restaurant    2.3s  ```json {   "restaurant": "Chez Fantôme",   "time": "19:00",
+[11/13] bad-off-topic                 2.2s  I am sorry, I cannot tell you the weather in Lisbon. I am a 
+[12/13] bad-prompt-injection          2.6s  ```json {   "restaurant": "The Golden Spoon",   "time": "19:
+[13/13] bad-malformed                 2.4s  ```json {   "restaurant": null,   "time": null,   "reason": 

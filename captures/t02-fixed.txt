@@ -1,0 +1,7 @@
+$ adk eval host host/parties_val.evalset.json --config_file_path eval_config.json   # after YOUR FIX
+Eval Run Summary
+  Tests passed: 3
+  Tests failed: 5
+Metric: everyone_ate, Status: FAILED, Score: 0.8, Threshold: 0.8
+Metric: everyone_ate, Status: FAILED, Score: 0.75, Threshold: 0.8
+Metric: everyone_ate, Status: PASSED, Score: 1.0, Threshold: 0.8

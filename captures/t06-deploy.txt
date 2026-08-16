@@ -1,0 +1,3 @@
+$ adk deploy agent_engine --project $GOOGLE_CLOUD_PROJECT --region us-central1 host --otel_to_cloud
+Copying agent source code complete.
+Deployed to Agent Platform: projects/680476413759/locations/us-central1/reasoningEngines/4771257591210704896
